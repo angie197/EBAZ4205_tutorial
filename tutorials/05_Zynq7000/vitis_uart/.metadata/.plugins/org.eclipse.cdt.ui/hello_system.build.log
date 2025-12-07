@@ -1,0 +1,14 @@
+11:21:21 **** Incremental Build of configuration Debug for project hello_system ****
+make all 
+Generating bif file for the system project
+generate_system_bif.bat 50524 C:/Users/USER/Desktop/EBAZ4205/XilinxFPGA_SE/EBZA4205/05_Zynq7000/vitis_uart/EBAZ4205_1/export/EBAZ4205_1/EBAZ4205_1.xpfm standalone_ps7_cortexa9_0 C:/Users/USER/Desktop/EBAZ4205/XilinxFPGA_SE/EBZA4205/05_Zynq7000/vitis_uart/hello_system/Debug/system.bif
+ECHO は <OFF> です。
+ECHO は <OFF> です。
+sdcard_gen --xpfm C:/Users/USER/Desktop/EBAZ4205/XilinxFPGA_SE/EBZA4205/05_Zynq7000/vitis_uart/EBAZ4205_1/export/EBAZ4205_1/EBAZ4205_1.xpfm --sys_config EBAZ4205_1 --bif C:/Users/USER/Desktop/EBAZ4205/XilinxFPGA_SE/EBZA4205/05_Zynq7000/vitis_uart/hello_system/Debug/system.bif --bitstream C:/Users/USER/Desktop/EBAZ4205/XilinxFPGA_SE/EBZA4205/05_Zynq7000/vitis_uart/hello/_ide/bitstream/design_1_wrapper.bit --elf C:/Users/USER/Desktop/EBAZ4205/XilinxFPGA_SE/EBZA4205/05_Zynq7000/vitis_uart/hello/Debug/hello.elf,ps7_cortexa9_0
+ECHO は <OFF> です。
+ECHO は <OFF> です。
+creating BOOT.BIN using C:/Users/USER/Desktop/EBAZ4205/XilinxFPGA_SE/EBZA4205/05_Zynq7000/vitis_uart/hello/_ide/bitstream/design_1_wrapper.bit
+Running C:/Xilinx/Vitis/2023.2/bin/bootgen  -image C:/Users/USER/Desktop/EBAZ4205/XilinxFPGA_SE/EBZA4205/05_Zynq7000/vitis_uart/hello_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
+
+11:21:36 Build Finished (took 15s.107ms)
+

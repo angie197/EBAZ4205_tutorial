@@ -1,0 +1,25 @@
+21:46:40 **** Incremental Build of configuration Debug for project LCD_TEST ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+'Building file: ../src/main.c'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/USER/Desktop/EBAZ4205/XilinxFPGA_SE/EBZA4205/PS_LCD_test/vitis/EBAZ4205/export/EBAZ4205/sw/EBAZ4205/standalone_domain/bspinclude/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: LCD_TEST.elf'
+'Invoking: ARM v7 g++ linker'
+arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/USER/Desktop/EBAZ4205/XilinxFPGA_SE/EBZA4205/PS_LCD_test/vitis/EBAZ4205/export/EBAZ4205/sw/EBAZ4205/standalone_domain/bsplib/lib -o "LCD_TEST.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: LCD_TEST.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size LCD_TEST.elf  |tee "LCD_TEST.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  34354	   2192	  22672	  59218	   e752	LCD_TEST.elf
+'Finished building: LCD_TEST.elf.size'
+' '
+
+21:46:43 Build Finished (took 2s.780ms)
+

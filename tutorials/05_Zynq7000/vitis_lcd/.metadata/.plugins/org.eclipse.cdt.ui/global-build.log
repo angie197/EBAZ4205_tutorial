@@ -1,0 +1,24 @@
+Nothing to build in platform 'EBAZ4205_LCD'
+
+21:22:14 **** Incremental Build of configuration Debug for project Hello_LCD ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+'Building file: ../src/main.c'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/USER/Desktop/EBAZ4205/XilinxFPGA_SE/EBZA4205/05_Zynq7000/vitis_lcd/EBAZ4205_LCD/export/EBAZ4205_LCD/sw/EBAZ4205_LCD/standalone_domain/bspinclude/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: Hello_LCD.elf'
+'Invoking: ARM v7 g++ linker'
+arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/USER/Desktop/EBAZ4205/XilinxFPGA_SE/EBZA4205/05_Zynq7000/vitis_lcd/EBAZ4205_LCD/export/EBAZ4205_LCD/sw/EBAZ4205_LCD/standalone_domain/bsplib/lib -o "Hello_LCD.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Hello_LCD.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Hello_LCD.elf  |tee "Hello_LCD.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  37173	   2192	  22672	  62037	   f255	Hello_LCD.elf
+'Finished building: Hello_LCD.elf.size'
+' '

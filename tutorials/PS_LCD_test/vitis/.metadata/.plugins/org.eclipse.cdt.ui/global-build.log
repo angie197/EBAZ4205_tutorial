@@ -1,0 +1,35 @@
+Nothing to build in platform 'EBAZ4205'
+
+21:46:40 **** Incremental Build of configuration Debug for project LCD_TEST ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+'Building file: ../src/main.c'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/USER/Desktop/EBAZ4205/XilinxFPGA_SE/EBZA4205/PS_LCD_test/vitis/EBAZ4205/export/EBAZ4205/sw/EBAZ4205/standalone_domain/bspinclude/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: LCD_TEST.elf'
+'Invoking: ARM v7 g++ linker'
+arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/USER/Desktop/EBAZ4205/XilinxFPGA_SE/EBZA4205/PS_LCD_test/vitis/EBAZ4205/export/EBAZ4205/sw/EBAZ4205/standalone_domain/bsplib/lib -o "LCD_TEST.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: LCD_TEST.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size LCD_TEST.elf  |tee "LCD_TEST.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  34354	   2192	  22672	  59218	   e752	LCD_TEST.elf
+'Finished building: LCD_TEST.elf.size'
+' '
+21:46:43 **** Incremental Build of configuration Debug for project LCD_TEST_system ****
+make all 
+Generating bif file for the system project
+generate_system_bif.bat 59398 C:/Users/USER/Desktop/EBAZ4205/XilinxFPGA_SE/EBZA4205/PS_LCD_test/vitis/EBAZ4205/export/EBAZ4205/EBAZ4205.xpfm standalone_domain C:/Users/USER/Desktop/EBAZ4205/XilinxFPGA_SE/EBZA4205/PS_LCD_test/vitis/LCD_TEST_system/Debug/system.bif
+ECHO は <OFF> です。
+ECHO は <OFF> です。
+sdcard_gen --xpfm C:/Users/USER/Desktop/EBAZ4205/XilinxFPGA_SE/EBZA4205/PS_LCD_test/vitis/EBAZ4205/export/EBAZ4205/EBAZ4205.xpfm --sys_config EBAZ4205 --bif C:/Users/USER/Desktop/EBAZ4205/XilinxFPGA_SE/EBZA4205/PS_LCD_test/vitis/LCD_TEST_system/Debug/system.bif --bitstream C:/Users/USER/Desktop/EBAZ4205/XilinxFPGA_SE/EBZA4205/PS_LCD_test/vitis/LCD_TEST/_ide/bitstream/system_lcd_wrapper.bit --elf C:/Users/USER/Desktop/EBAZ4205/XilinxFPGA_SE/EBZA4205/PS_LCD_test/vitis/LCD_TEST/Debug/LCD_TEST.elf,ps7_cortexa9_0
+ECHO は <OFF> です。
+ECHO は <OFF> です。
+creating BOOT.BIN using C:/Users/USER/Desktop/EBAZ4205/XilinxFPGA_SE/EBZA4205/PS_LCD_test/vitis/LCD_TEST/_ide/bitstream/system_lcd_wrapper.bit
+Running C:/Xilinx/Vitis/2023.2/bin/bootgen  -image C:/Users/USER/Desktop/EBAZ4205/XilinxFPGA_SE/EBZA4205/PS_LCD_test/vitis/LCD_TEST_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN

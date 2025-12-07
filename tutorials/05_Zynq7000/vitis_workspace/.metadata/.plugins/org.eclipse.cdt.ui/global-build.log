@@ -1,0 +1,24 @@
+Nothing to build in platform 'blink_zq_platform'
+
+21:13:19 **** Build of configuration Debug for project led_test ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+'Building file: ../src/led_test.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/led_test.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/USER/Desktop/EBAZ4205/XilinxFPGA_SE/EBZA4205/05_Zynq7000/vitis_workspace/blink_zq_platform/export/blink_zq_platform/sw/blink_zq_platform/standalone_domain/bspinclude/include -MMD -MP -MF"src/led_test.d" -MT"src/led_test.o" -o "src/led_test.o" "../src/led_test.c"
+'Finished building: ../src/led_test.c'
+' '
+'Building target: led_test.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/USER/Desktop/EBAZ4205/XilinxFPGA_SE/EBZA4205/05_Zynq7000/vitis_workspace/blink_zq_platform/export/blink_zq_platform/sw/blink_zq_platform/standalone_domain/bsplib/lib -o "led_test.elf"  ./src/led_test.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: led_test.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size led_test.elf  |tee "led_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22109	   1144	  22568	  45821	   b2fd	led_test.elf
+'Finished building: led_test.elf.size'
+' '

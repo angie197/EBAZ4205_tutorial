@@ -1,0 +1,25 @@
+22:19:47 **** Incremental Build of configuration Debug for project LED_test ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+'Building file: ../src/led_test.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/led_test.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/USER/Desktop/EBAZ4205/XilinxFPGA_SE/EBZA4205/05_Zynq7000/vitis_adapter/EBZA4205_adapter/export/EBZA4205_adapter/sw/EBZA4205_adapter/standalone_domain/bspinclude/include -MMD -MP -MF"src/led_test.d" -MT"src/led_test.o" -o "src/led_test.o" "../src/led_test.c"
+'Finished building: ../src/led_test.c'
+' '
+'Building target: LED_test.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/USER/Desktop/EBAZ4205/XilinxFPGA_SE/EBZA4205/05_Zynq7000/vitis_adapter/EBZA4205_adapter/export/EBZA4205_adapter/sw/EBZA4205_adapter/standalone_domain/bsplib/lib -o "LED_test.elf"  ./src/led_test.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: LED_test.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size LED_test.elf  |tee "LED_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22237	   1144	  22568	  45949	   b37d	LED_test.elf
+'Finished building: LED_test.elf.size'
+' '
+
+22:19:49 Build Finished (took 2s.644ms)
+

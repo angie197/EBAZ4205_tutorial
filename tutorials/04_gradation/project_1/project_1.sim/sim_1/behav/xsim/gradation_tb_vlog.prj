@@ -1,0 +1,12 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../project_1.srcs/sources_1/imports/gradation/HDL" \
+"../../../../project_1.srcs/sources_1/imports/gradation/HDL/gradation.v" \
+"../../../../project_1.srcs/sources_1/imports/HDL/pckgen.v" \
+"../../../../project_1.srcs/sources_1/imports/gradation/HDL/syncgen.v" \
+"../../../../project_1.srcs/sim_1/imports/SIM/gradation_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
