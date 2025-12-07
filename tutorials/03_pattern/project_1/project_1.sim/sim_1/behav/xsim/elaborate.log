@@ -1,0 +1,28 @@
+Vivado Simulator v2023.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2023.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot pattern_tb_behav xil_defaultlib.pattern_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "/wrk/ci/prod/2023.2/rdi_builds/continuous/2023_10_13_4029153/data/verilog/src/unisims/BUFG.v" Line 27. Module BUFG has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/ci/prod/2023.2/rdi_builds/continuous/2023_10_13_4029153/data/verilog/src/unisims/MMCME2_BASE.v" Line 25. Module MMCME2_BASE(CLKFBOUT_MULT_F=27.0,CLKIN1_PERIOD=30.0,CLKOUT0_DIVIDE_F=35.75,REF_JITTER1=0.0) has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/ci/prod/2023.2/rdi_builds/continuous/2023_10_13_4029153/data/verilog/src/unisims/MMCME2_ADV.v" Line 123. Module MMCME2_ADV(CLKFBOUT_MULT_F=27.0,CLKIN1_PERIOD=30.0,CLKIN2_PERIOD=10.0,CLKOUT0_DIVIDE_F=35.75,REF_JITTER1=0.0) has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/ci/prod/2023.2/rdi_builds/continuous/2023_10_13_4029153/data/verilog/src/unisims/BUFG.v" Line 27. Module BUFG has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/ci/prod/2023.2/rdi_builds/continuous/2023_10_13_4029153/data/verilog/src/unisims/MMCME2_BASE.v" Line 25. Module MMCME2_BASE(CLKFBOUT_MULT_F=27.0,CLKIN1_PERIOD=30.0,CLKOUT0_DIVIDE_F=35.75,REF_JITTER1=0.0) has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/ci/prod/2023.2/rdi_builds/continuous/2023_10_13_4029153/data/verilog/src/unisims/MMCME2_ADV.v" Line 123. Module MMCME2_ADV(CLKFBOUT_MULT_F=27.0,CLKIN1_PERIOD=30.0,CLKIN2_PERIOD=10.0,CLKOUT0_DIVIDE_F=35.75,REF_JITTER1=0.0) has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/Users/USER/Desktop/EBAZ4205/XilinxFPGA_SE/EBZA4205/03_pattern/project_1/project_1.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/Users/USER/Desktop/EBAZ4205/XilinxFPGA_SE/EBZA4205/03_pattern/project_1/project_1.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.BUFG
+Compiling module unisims_ver.MMCME2_ADV(CLKFBOUT_MULT_F=27.0,...
+Compiling module unisims_ver.MMCME2_BASE(CLKFBOUT_MULT_F=27.0...
+Compiling module xil_defaultlib.pckgen
+Compiling module xil_defaultlib.syncgen
+Compiling module xil_defaultlib.pattern
+Compiling module xil_defaultlib.pattern_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot pattern_tb_behav
