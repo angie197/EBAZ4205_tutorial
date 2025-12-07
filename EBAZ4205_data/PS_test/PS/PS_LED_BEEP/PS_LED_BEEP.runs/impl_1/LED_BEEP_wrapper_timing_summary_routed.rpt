@@ -1,0 +1,1459 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Fri Jul  1 22:17:42 2022
+| Host         : YR-20220613JURZ running 64-bit major release  (build 9200)
+| Command      : report_timing_summary -max_paths 10 -file LED_BEEP_wrapper_timing_summary_routed.rpt -pb LED_BEEP_wrapper_timing_summary_routed.pb -rpx LED_BEEP_wrapper_timing_summary_routed.rpx -warn_on_violation
+| Design       : LED_BEEP_wrapper
+| Device       : 7z010-clg400
+| Speed File   : -1  PRODUCTION 1.11 2014-09-11
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  false
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock
+2. checking constant_clock
+3. checking pulse_width_clock
+4. checking unconstrained_internal_endpoints
+5. checking no_input_delay
+6. checking no_output_delay
+7. checking multiple_clock
+8. checking generated_clocks
+9. checking loops
+10. checking partial_input_delay
+11. checking partial_output_delay
+12. checking latch_loops
+
+1. checking no_clock
+--------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock
+--------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock
+-----------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints
+--------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay
+--------------------------
+ There are 0 input ports with no input delay specified.
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay
+---------------------------
+ There are 4 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock
+--------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks
+----------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops
+-----------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay
+--------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay
+---------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops
+------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+     14.602        0.000                      0                  148        0.188        0.000                      0                  148        9.500        0.000                       0                    91  
+
+
+All user specified timing constraints are met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock       Waveform(ns)       Period(ns)      Frequency(MHz)
+-----       ------------       ----------      --------------
+clk_fpga_0  {0.000 10.000}     20.000          50.000          
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+clk_fpga_0         14.602        0.000                      0                  148        0.188        0.000                      0                  148        9.500        0.000                       0                    91  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clk_fpga_0
+  To Clock:  clk_fpga_0
+
+Setup :            0  Failing Endpoints,  Worst Slack       14.602ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.188ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        9.500ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             14.602ns  (required time - arrival time)
+  Source:                 LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[3]/C
+                            (rising edge-triggered cell FDCE clocked by clk_fpga_0  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[25]/D
+                            (rising edge-triggered cell FDCE clocked by clk_fpga_0  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (clk_fpga_0 rise@20.000ns - clk_fpga_0 rise@0.000ns)
+  Data Path Delay:        5.090ns  (logic 2.264ns (44.480%)  route 2.826ns (55.520%))
+  Logic Levels:           10  (CARRY4=7 LUT4=1 LUT6=2)
+  Clock Path Skew:        -0.068ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.741ns = ( 22.741 - 20.000 ) 
+    Source Clock Delay      (SCD):    3.039ns
+    Clock Pessimism Removal (CPR):    0.230ns
+  Clock Uncertainty:      0.302ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.600ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  LED_BEEP_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.207     1.207    LED_BEEP_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     1.308 r  LED_BEEP_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=91, routed)          1.731     3.039    LED_BEEP_i/LED_BEEP_TEST_0/inst/clk
+    SLICE_X41Y69         FDCE                                         r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X41Y69         FDCE (Prop_fdce_C_Q)         0.456     3.495 f  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[3]/Q
+                         net (fo=2, routed)           0.678     4.173    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[3]
+    SLICE_X40Y69         LUT4 (Prop_lut4_I0_O)        0.124     4.297 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/led_state[1]_i_5/O
+                         net (fo=2, routed)           0.950     5.247    LED_BEEP_i/LED_BEEP_TEST_0/inst/led_state[1]_i_5_n_0
+    SLICE_X40Y73         LUT6 (Prop_lut6_I3_O)        0.124     5.371 f  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count[0]_i_7/O
+                         net (fo=25, routed)          1.189     6.560    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count[0]_i_7_n_0
+    SLICE_X41Y69         LUT6 (Prop_lut6_I4_O)        0.124     6.684 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count[0]_i_6/O
+                         net (fo=1, routed)           0.000     6.684    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count[0]_i_6_n_0
+    SLICE_X41Y69         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532     7.216 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[0]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.216    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[0]_i_1_n_0
+    SLICE_X41Y70         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.330 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[4]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.330    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[4]_i_1_n_0
+    SLICE_X41Y71         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.444 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[8]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.444    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[8]_i_1_n_0
+    SLICE_X41Y72         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.558 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[12]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.558    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[12]_i_1_n_0
+    SLICE_X41Y73         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.672 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[16]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.672    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[16]_i_1_n_0
+    SLICE_X41Y74         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.786 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[20]_i_1/CO[3]
+                         net (fo=1, routed)           0.009     7.795    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[20]_i_1_n_0
+    SLICE_X41Y75         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334     8.129 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[24]_i_1/O[1]
+                         net (fo=1, routed)           0.000     8.129    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[24]_i_1_n_6
+    SLICE_X41Y75         FDCE                                         r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[25]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                     20.000    20.000 r  
+    PS7_X0Y0             PS7                          0.000    20.000 r  LED_BEEP_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.101    21.101    LED_BEEP_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    21.192 r  LED_BEEP_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=91, routed)          1.549    22.741    LED_BEEP_i/LED_BEEP_TEST_0/inst/clk
+    SLICE_X41Y75         FDCE                                         r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[25]/C
+                         clock pessimism              0.230    22.971    
+                         clock uncertainty           -0.302    22.669    
+    SLICE_X41Y75         FDCE (Setup_fdce_C_D)        0.062    22.731    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[25]
+  -------------------------------------------------------------------
+                         required time                         22.731    
+                         arrival time                          -8.129    
+  -------------------------------------------------------------------
+                         slack                                 14.602    
+
+Slack (MET) :             14.713ns  (required time - arrival time)
+  Source:                 LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[3]/C
+                            (rising edge-triggered cell FDCE clocked by clk_fpga_0  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[24]/D
+                            (rising edge-triggered cell FDCE clocked by clk_fpga_0  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (clk_fpga_0 rise@20.000ns - clk_fpga_0 rise@0.000ns)
+  Data Path Delay:        4.979ns  (logic 2.153ns (43.242%)  route 2.826ns (56.758%))
+  Logic Levels:           10  (CARRY4=7 LUT4=1 LUT6=2)
+  Clock Path Skew:        -0.068ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.741ns = ( 22.741 - 20.000 ) 
+    Source Clock Delay      (SCD):    3.039ns
+    Clock Pessimism Removal (CPR):    0.230ns
+  Clock Uncertainty:      0.302ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.600ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  LED_BEEP_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.207     1.207    LED_BEEP_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     1.308 r  LED_BEEP_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=91, routed)          1.731     3.039    LED_BEEP_i/LED_BEEP_TEST_0/inst/clk
+    SLICE_X41Y69         FDCE                                         r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X41Y69         FDCE (Prop_fdce_C_Q)         0.456     3.495 f  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[3]/Q
+                         net (fo=2, routed)           0.678     4.173    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[3]
+    SLICE_X40Y69         LUT4 (Prop_lut4_I0_O)        0.124     4.297 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/led_state[1]_i_5/O
+                         net (fo=2, routed)           0.950     5.247    LED_BEEP_i/LED_BEEP_TEST_0/inst/led_state[1]_i_5_n_0
+    SLICE_X40Y73         LUT6 (Prop_lut6_I3_O)        0.124     5.371 f  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count[0]_i_7/O
+                         net (fo=25, routed)          1.189     6.560    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count[0]_i_7_n_0
+    SLICE_X41Y69         LUT6 (Prop_lut6_I4_O)        0.124     6.684 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count[0]_i_6/O
+                         net (fo=1, routed)           0.000     6.684    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count[0]_i_6_n_0
+    SLICE_X41Y69         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532     7.216 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[0]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.216    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[0]_i_1_n_0
+    SLICE_X41Y70         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.330 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[4]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.330    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[4]_i_1_n_0
+    SLICE_X41Y71         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.444 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[8]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.444    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[8]_i_1_n_0
+    SLICE_X41Y72         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.558 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[12]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.558    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[12]_i_1_n_0
+    SLICE_X41Y73         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.672 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[16]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.672    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[16]_i_1_n_0
+    SLICE_X41Y74         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.786 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[20]_i_1/CO[3]
+                         net (fo=1, routed)           0.009     7.795    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[20]_i_1_n_0
+    SLICE_X41Y75         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.223     8.018 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[24]_i_1/O[0]
+                         net (fo=1, routed)           0.000     8.018    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[24]_i_1_n_7
+    SLICE_X41Y75         FDCE                                         r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[24]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                     20.000    20.000 r  
+    PS7_X0Y0             PS7                          0.000    20.000 r  LED_BEEP_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.101    21.101    LED_BEEP_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    21.192 r  LED_BEEP_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=91, routed)          1.549    22.741    LED_BEEP_i/LED_BEEP_TEST_0/inst/clk
+    SLICE_X41Y75         FDCE                                         r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[24]/C
+                         clock pessimism              0.230    22.971    
+                         clock uncertainty           -0.302    22.669    
+    SLICE_X41Y75         FDCE (Setup_fdce_C_D)        0.062    22.731    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[24]
+  -------------------------------------------------------------------
+                         required time                         22.731    
+                         arrival time                          -8.018    
+  -------------------------------------------------------------------
+                         slack                                 14.713    
+
+Slack (MET) :             14.763ns  (required time - arrival time)
+  Source:                 LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[3]/C
+                            (rising edge-triggered cell FDCE clocked by clk_fpga_0  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[21]/D
+                            (rising edge-triggered cell FDCE clocked by clk_fpga_0  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (clk_fpga_0 rise@20.000ns - clk_fpga_0 rise@0.000ns)
+  Data Path Delay:        4.967ns  (logic 2.150ns (43.286%)  route 2.817ns (56.714%))
+  Logic Levels:           9  (CARRY4=6 LUT4=1 LUT6=2)
+  Clock Path Skew:        -0.030ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.741ns = ( 22.741 - 20.000 ) 
+    Source Clock Delay      (SCD):    3.039ns
+    Clock Pessimism Removal (CPR):    0.268ns
+  Clock Uncertainty:      0.302ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.600ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  LED_BEEP_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.207     1.207    LED_BEEP_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     1.308 r  LED_BEEP_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=91, routed)          1.731     3.039    LED_BEEP_i/LED_BEEP_TEST_0/inst/clk
+    SLICE_X41Y69         FDCE                                         r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X41Y69         FDCE (Prop_fdce_C_Q)         0.456     3.495 f  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[3]/Q
+                         net (fo=2, routed)           0.678     4.173    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[3]
+    SLICE_X40Y69         LUT4 (Prop_lut4_I0_O)        0.124     4.297 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/led_state[1]_i_5/O
+                         net (fo=2, routed)           0.950     5.247    LED_BEEP_i/LED_BEEP_TEST_0/inst/led_state[1]_i_5_n_0
+    SLICE_X40Y73         LUT6 (Prop_lut6_I3_O)        0.124     5.371 f  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count[0]_i_7/O
+                         net (fo=25, routed)          1.189     6.560    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count[0]_i_7_n_0
+    SLICE_X41Y69         LUT6 (Prop_lut6_I4_O)        0.124     6.684 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count[0]_i_6/O
+                         net (fo=1, routed)           0.000     6.684    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count[0]_i_6_n_0
+    SLICE_X41Y69         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532     7.216 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[0]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.216    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[0]_i_1_n_0
+    SLICE_X41Y70         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.330 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[4]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.330    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[4]_i_1_n_0
+    SLICE_X41Y71         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.444 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[8]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.444    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[8]_i_1_n_0
+    SLICE_X41Y72         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.558 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[12]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.558    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[12]_i_1_n_0
+    SLICE_X41Y73         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.672 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[16]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.672    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[16]_i_1_n_0
+    SLICE_X41Y74         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334     8.006 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[20]_i_1/O[1]
+                         net (fo=1, routed)           0.000     8.006    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[20]_i_1_n_6
+    SLICE_X41Y74         FDCE                                         r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[21]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                     20.000    20.000 r  
+    PS7_X0Y0             PS7                          0.000    20.000 r  LED_BEEP_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.101    21.101    LED_BEEP_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    21.192 r  LED_BEEP_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=91, routed)          1.549    22.741    LED_BEEP_i/LED_BEEP_TEST_0/inst/clk
+    SLICE_X41Y74         FDCE                                         r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[21]/C
+                         clock pessimism              0.268    23.009    
+                         clock uncertainty           -0.302    22.707    
+    SLICE_X41Y74         FDCE (Setup_fdce_C_D)        0.062    22.769    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[21]
+  -------------------------------------------------------------------
+                         required time                         22.769    
+                         arrival time                          -8.006    
+  -------------------------------------------------------------------
+                         slack                                 14.763    
+
+Slack (MET) :             14.784ns  (required time - arrival time)
+  Source:                 LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[3]/C
+                            (rising edge-triggered cell FDCE clocked by clk_fpga_0  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[23]/D
+                            (rising edge-triggered cell FDCE clocked by clk_fpga_0  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (clk_fpga_0 rise@20.000ns - clk_fpga_0 rise@0.000ns)
+  Data Path Delay:        4.946ns  (logic 2.129ns (43.045%)  route 2.817ns (56.955%))
+  Logic Levels:           9  (CARRY4=6 LUT4=1 LUT6=2)
+  Clock Path Skew:        -0.030ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.741ns = ( 22.741 - 20.000 ) 
+    Source Clock Delay      (SCD):    3.039ns
+    Clock Pessimism Removal (CPR):    0.268ns
+  Clock Uncertainty:      0.302ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.600ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  LED_BEEP_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.207     1.207    LED_BEEP_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     1.308 r  LED_BEEP_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=91, routed)          1.731     3.039    LED_BEEP_i/LED_BEEP_TEST_0/inst/clk
+    SLICE_X41Y69         FDCE                                         r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X41Y69         FDCE (Prop_fdce_C_Q)         0.456     3.495 f  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[3]/Q
+                         net (fo=2, routed)           0.678     4.173    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[3]
+    SLICE_X40Y69         LUT4 (Prop_lut4_I0_O)        0.124     4.297 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/led_state[1]_i_5/O
+                         net (fo=2, routed)           0.950     5.247    LED_BEEP_i/LED_BEEP_TEST_0/inst/led_state[1]_i_5_n_0
+    SLICE_X40Y73         LUT6 (Prop_lut6_I3_O)        0.124     5.371 f  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count[0]_i_7/O
+                         net (fo=25, routed)          1.189     6.560    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count[0]_i_7_n_0
+    SLICE_X41Y69         LUT6 (Prop_lut6_I4_O)        0.124     6.684 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count[0]_i_6/O
+                         net (fo=1, routed)           0.000     6.684    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count[0]_i_6_n_0
+    SLICE_X41Y69         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532     7.216 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[0]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.216    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[0]_i_1_n_0
+    SLICE_X41Y70         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.330 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[4]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.330    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[4]_i_1_n_0
+    SLICE_X41Y71         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.444 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[8]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.444    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[8]_i_1_n_0
+    SLICE_X41Y72         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.558 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[12]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.558    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[12]_i_1_n_0
+    SLICE_X41Y73         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.672 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[16]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.672    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[16]_i_1_n_0
+    SLICE_X41Y74         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.313     7.985 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[20]_i_1/O[3]
+                         net (fo=1, routed)           0.000     7.985    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[20]_i_1_n_4
+    SLICE_X41Y74         FDCE                                         r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[23]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                     20.000    20.000 r  
+    PS7_X0Y0             PS7                          0.000    20.000 r  LED_BEEP_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.101    21.101    LED_BEEP_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    21.192 r  LED_BEEP_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=91, routed)          1.549    22.741    LED_BEEP_i/LED_BEEP_TEST_0/inst/clk
+    SLICE_X41Y74         FDCE                                         r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[23]/C
+                         clock pessimism              0.268    23.009    
+                         clock uncertainty           -0.302    22.707    
+    SLICE_X41Y74         FDCE (Setup_fdce_C_D)        0.062    22.769    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[23]
+  -------------------------------------------------------------------
+                         required time                         22.769    
+                         arrival time                          -7.985    
+  -------------------------------------------------------------------
+                         slack                                 14.784    
+
+Slack (MET) :             14.858ns  (required time - arrival time)
+  Source:                 LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[3]/C
+                            (rising edge-triggered cell FDCE clocked by clk_fpga_0  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[22]/D
+                            (rising edge-triggered cell FDCE clocked by clk_fpga_0  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (clk_fpga_0 rise@20.000ns - clk_fpga_0 rise@0.000ns)
+  Data Path Delay:        4.872ns  (logic 2.055ns (42.180%)  route 2.817ns (57.820%))
+  Logic Levels:           9  (CARRY4=6 LUT4=1 LUT6=2)
+  Clock Path Skew:        -0.030ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.741ns = ( 22.741 - 20.000 ) 
+    Source Clock Delay      (SCD):    3.039ns
+    Clock Pessimism Removal (CPR):    0.268ns
+  Clock Uncertainty:      0.302ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.600ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  LED_BEEP_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.207     1.207    LED_BEEP_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     1.308 r  LED_BEEP_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=91, routed)          1.731     3.039    LED_BEEP_i/LED_BEEP_TEST_0/inst/clk
+    SLICE_X41Y69         FDCE                                         r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X41Y69         FDCE (Prop_fdce_C_Q)         0.456     3.495 f  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[3]/Q
+                         net (fo=2, routed)           0.678     4.173    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[3]
+    SLICE_X40Y69         LUT4 (Prop_lut4_I0_O)        0.124     4.297 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/led_state[1]_i_5/O
+                         net (fo=2, routed)           0.950     5.247    LED_BEEP_i/LED_BEEP_TEST_0/inst/led_state[1]_i_5_n_0
+    SLICE_X40Y73         LUT6 (Prop_lut6_I3_O)        0.124     5.371 f  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count[0]_i_7/O
+                         net (fo=25, routed)          1.189     6.560    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count[0]_i_7_n_0
+    SLICE_X41Y69         LUT6 (Prop_lut6_I4_O)        0.124     6.684 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count[0]_i_6/O
+                         net (fo=1, routed)           0.000     6.684    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count[0]_i_6_n_0
+    SLICE_X41Y69         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532     7.216 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[0]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.216    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[0]_i_1_n_0
+    SLICE_X41Y70         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.330 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[4]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.330    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[4]_i_1_n_0
+    SLICE_X41Y71         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.444 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[8]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.444    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[8]_i_1_n_0
+    SLICE_X41Y72         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.558 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[12]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.558    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[12]_i_1_n_0
+    SLICE_X41Y73         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.672 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[16]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.672    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[16]_i_1_n_0
+    SLICE_X41Y74         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239     7.911 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[20]_i_1/O[2]
+                         net (fo=1, routed)           0.000     7.911    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[20]_i_1_n_5
+    SLICE_X41Y74         FDCE                                         r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[22]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                     20.000    20.000 r  
+    PS7_X0Y0             PS7                          0.000    20.000 r  LED_BEEP_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.101    21.101    LED_BEEP_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    21.192 r  LED_BEEP_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=91, routed)          1.549    22.741    LED_BEEP_i/LED_BEEP_TEST_0/inst/clk
+    SLICE_X41Y74         FDCE                                         r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[22]/C
+                         clock pessimism              0.268    23.009    
+                         clock uncertainty           -0.302    22.707    
+    SLICE_X41Y74         FDCE (Setup_fdce_C_D)        0.062    22.769    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[22]
+  -------------------------------------------------------------------
+                         required time                         22.769    
+                         arrival time                          -7.911    
+  -------------------------------------------------------------------
+                         slack                                 14.858    
+
+Slack (MET) :             14.874ns  (required time - arrival time)
+  Source:                 LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[3]/C
+                            (rising edge-triggered cell FDCE clocked by clk_fpga_0  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[20]/D
+                            (rising edge-triggered cell FDCE clocked by clk_fpga_0  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (clk_fpga_0 rise@20.000ns - clk_fpga_0 rise@0.000ns)
+  Data Path Delay:        4.856ns  (logic 2.039ns (41.990%)  route 2.817ns (58.010%))
+  Logic Levels:           9  (CARRY4=6 LUT4=1 LUT6=2)
+  Clock Path Skew:        -0.030ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.741ns = ( 22.741 - 20.000 ) 
+    Source Clock Delay      (SCD):    3.039ns
+    Clock Pessimism Removal (CPR):    0.268ns
+  Clock Uncertainty:      0.302ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.600ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  LED_BEEP_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.207     1.207    LED_BEEP_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     1.308 r  LED_BEEP_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=91, routed)          1.731     3.039    LED_BEEP_i/LED_BEEP_TEST_0/inst/clk
+    SLICE_X41Y69         FDCE                                         r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X41Y69         FDCE (Prop_fdce_C_Q)         0.456     3.495 f  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[3]/Q
+                         net (fo=2, routed)           0.678     4.173    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[3]
+    SLICE_X40Y69         LUT4 (Prop_lut4_I0_O)        0.124     4.297 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/led_state[1]_i_5/O
+                         net (fo=2, routed)           0.950     5.247    LED_BEEP_i/LED_BEEP_TEST_0/inst/led_state[1]_i_5_n_0
+    SLICE_X40Y73         LUT6 (Prop_lut6_I3_O)        0.124     5.371 f  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count[0]_i_7/O
+                         net (fo=25, routed)          1.189     6.560    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count[0]_i_7_n_0
+    SLICE_X41Y69         LUT6 (Prop_lut6_I4_O)        0.124     6.684 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count[0]_i_6/O
+                         net (fo=1, routed)           0.000     6.684    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count[0]_i_6_n_0
+    SLICE_X41Y69         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532     7.216 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[0]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.216    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[0]_i_1_n_0
+    SLICE_X41Y70         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.330 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[4]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.330    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[4]_i_1_n_0
+    SLICE_X41Y71         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.444 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[8]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.444    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[8]_i_1_n_0
+    SLICE_X41Y72         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.558 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[12]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.558    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[12]_i_1_n_0
+    SLICE_X41Y73         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.672 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[16]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.672    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[16]_i_1_n_0
+    SLICE_X41Y74         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.223     7.895 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[20]_i_1/O[0]
+                         net (fo=1, routed)           0.000     7.895    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[20]_i_1_n_7
+    SLICE_X41Y74         FDCE                                         r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[20]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                     20.000    20.000 r  
+    PS7_X0Y0             PS7                          0.000    20.000 r  LED_BEEP_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.101    21.101    LED_BEEP_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    21.192 r  LED_BEEP_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=91, routed)          1.549    22.741    LED_BEEP_i/LED_BEEP_TEST_0/inst/clk
+    SLICE_X41Y74         FDCE                                         r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[20]/C
+                         clock pessimism              0.268    23.009    
+                         clock uncertainty           -0.302    22.707    
+    SLICE_X41Y74         FDCE (Setup_fdce_C_D)        0.062    22.769    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[20]
+  -------------------------------------------------------------------
+                         required time                         22.769    
+                         arrival time                          -7.895    
+  -------------------------------------------------------------------
+                         slack                                 14.874    
+
+Slack (MET) :             14.879ns  (required time - arrival time)
+  Source:                 LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[3]/C
+                            (rising edge-triggered cell FDCE clocked by clk_fpga_0  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[17]/D
+                            (rising edge-triggered cell FDCE clocked by clk_fpga_0  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (clk_fpga_0 rise@20.000ns - clk_fpga_0 rise@0.000ns)
+  Data Path Delay:        4.853ns  (logic 2.036ns (41.954%)  route 2.817ns (58.046%))
+  Logic Levels:           8  (CARRY4=5 LUT4=1 LUT6=2)
+  Clock Path Skew:        -0.028ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.743ns = ( 22.743 - 20.000 ) 
+    Source Clock Delay      (SCD):    3.039ns
+    Clock Pessimism Removal (CPR):    0.268ns
+  Clock Uncertainty:      0.302ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.600ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  LED_BEEP_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.207     1.207    LED_BEEP_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     1.308 r  LED_BEEP_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=91, routed)          1.731     3.039    LED_BEEP_i/LED_BEEP_TEST_0/inst/clk
+    SLICE_X41Y69         FDCE                                         r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X41Y69         FDCE (Prop_fdce_C_Q)         0.456     3.495 f  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[3]/Q
+                         net (fo=2, routed)           0.678     4.173    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[3]
+    SLICE_X40Y69         LUT4 (Prop_lut4_I0_O)        0.124     4.297 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/led_state[1]_i_5/O
+                         net (fo=2, routed)           0.950     5.247    LED_BEEP_i/LED_BEEP_TEST_0/inst/led_state[1]_i_5_n_0
+    SLICE_X40Y73         LUT6 (Prop_lut6_I3_O)        0.124     5.371 f  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count[0]_i_7/O
+                         net (fo=25, routed)          1.189     6.560    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count[0]_i_7_n_0
+    SLICE_X41Y69         LUT6 (Prop_lut6_I4_O)        0.124     6.684 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count[0]_i_6/O
+                         net (fo=1, routed)           0.000     6.684    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count[0]_i_6_n_0
+    SLICE_X41Y69         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532     7.216 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[0]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.216    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[0]_i_1_n_0
+    SLICE_X41Y70         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.330 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[4]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.330    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[4]_i_1_n_0
+    SLICE_X41Y71         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.444 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[8]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.444    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[8]_i_1_n_0
+    SLICE_X41Y72         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.558 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[12]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.558    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[12]_i_1_n_0
+    SLICE_X41Y73         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334     7.892 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[16]_i_1/O[1]
+                         net (fo=1, routed)           0.000     7.892    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[16]_i_1_n_6
+    SLICE_X41Y73         FDCE                                         r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[17]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                     20.000    20.000 r  
+    PS7_X0Y0             PS7                          0.000    20.000 r  LED_BEEP_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.101    21.101    LED_BEEP_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    21.192 r  LED_BEEP_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=91, routed)          1.551    22.743    LED_BEEP_i/LED_BEEP_TEST_0/inst/clk
+    SLICE_X41Y73         FDCE                                         r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[17]/C
+                         clock pessimism              0.268    23.011    
+                         clock uncertainty           -0.302    22.709    
+    SLICE_X41Y73         FDCE (Setup_fdce_C_D)        0.062    22.771    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[17]
+  -------------------------------------------------------------------
+                         required time                         22.771    
+                         arrival time                          -7.892    
+  -------------------------------------------------------------------
+                         slack                                 14.879    
+
+Slack (MET) :             14.900ns  (required time - arrival time)
+  Source:                 LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[3]/C
+                            (rising edge-triggered cell FDCE clocked by clk_fpga_0  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[19]/D
+                            (rising edge-triggered cell FDCE clocked by clk_fpga_0  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (clk_fpga_0 rise@20.000ns - clk_fpga_0 rise@0.000ns)
+  Data Path Delay:        4.832ns  (logic 2.015ns (41.702%)  route 2.817ns (58.298%))
+  Logic Levels:           8  (CARRY4=5 LUT4=1 LUT6=2)
+  Clock Path Skew:        -0.028ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.743ns = ( 22.743 - 20.000 ) 
+    Source Clock Delay      (SCD):    3.039ns
+    Clock Pessimism Removal (CPR):    0.268ns
+  Clock Uncertainty:      0.302ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.600ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  LED_BEEP_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.207     1.207    LED_BEEP_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     1.308 r  LED_BEEP_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=91, routed)          1.731     3.039    LED_BEEP_i/LED_BEEP_TEST_0/inst/clk
+    SLICE_X41Y69         FDCE                                         r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X41Y69         FDCE (Prop_fdce_C_Q)         0.456     3.495 f  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[3]/Q
+                         net (fo=2, routed)           0.678     4.173    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[3]
+    SLICE_X40Y69         LUT4 (Prop_lut4_I0_O)        0.124     4.297 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/led_state[1]_i_5/O
+                         net (fo=2, routed)           0.950     5.247    LED_BEEP_i/LED_BEEP_TEST_0/inst/led_state[1]_i_5_n_0
+    SLICE_X40Y73         LUT6 (Prop_lut6_I3_O)        0.124     5.371 f  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count[0]_i_7/O
+                         net (fo=25, routed)          1.189     6.560    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count[0]_i_7_n_0
+    SLICE_X41Y69         LUT6 (Prop_lut6_I4_O)        0.124     6.684 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count[0]_i_6/O
+                         net (fo=1, routed)           0.000     6.684    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count[0]_i_6_n_0
+    SLICE_X41Y69         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532     7.216 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[0]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.216    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[0]_i_1_n_0
+    SLICE_X41Y70         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.330 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[4]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.330    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[4]_i_1_n_0
+    SLICE_X41Y71         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.444 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[8]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.444    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[8]_i_1_n_0
+    SLICE_X41Y72         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.558 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[12]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.558    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[12]_i_1_n_0
+    SLICE_X41Y73         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.313     7.871 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[16]_i_1/O[3]
+                         net (fo=1, routed)           0.000     7.871    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[16]_i_1_n_4
+    SLICE_X41Y73         FDCE                                         r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[19]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                     20.000    20.000 r  
+    PS7_X0Y0             PS7                          0.000    20.000 r  LED_BEEP_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.101    21.101    LED_BEEP_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    21.192 r  LED_BEEP_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=91, routed)          1.551    22.743    LED_BEEP_i/LED_BEEP_TEST_0/inst/clk
+    SLICE_X41Y73         FDCE                                         r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[19]/C
+                         clock pessimism              0.268    23.011    
+                         clock uncertainty           -0.302    22.709    
+    SLICE_X41Y73         FDCE (Setup_fdce_C_D)        0.062    22.771    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[19]
+  -------------------------------------------------------------------
+                         required time                         22.771    
+                         arrival time                          -7.871    
+  -------------------------------------------------------------------
+                         slack                                 14.900    
+
+Slack (MET) :             14.974ns  (required time - arrival time)
+  Source:                 LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[3]/C
+                            (rising edge-triggered cell FDCE clocked by clk_fpga_0  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[18]/D
+                            (rising edge-triggered cell FDCE clocked by clk_fpga_0  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (clk_fpga_0 rise@20.000ns - clk_fpga_0 rise@0.000ns)
+  Data Path Delay:        4.758ns  (logic 1.941ns (40.795%)  route 2.817ns (59.205%))
+  Logic Levels:           8  (CARRY4=5 LUT4=1 LUT6=2)
+  Clock Path Skew:        -0.028ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.743ns = ( 22.743 - 20.000 ) 
+    Source Clock Delay      (SCD):    3.039ns
+    Clock Pessimism Removal (CPR):    0.268ns
+  Clock Uncertainty:      0.302ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.600ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  LED_BEEP_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.207     1.207    LED_BEEP_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     1.308 r  LED_BEEP_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=91, routed)          1.731     3.039    LED_BEEP_i/LED_BEEP_TEST_0/inst/clk
+    SLICE_X41Y69         FDCE                                         r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X41Y69         FDCE (Prop_fdce_C_Q)         0.456     3.495 f  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[3]/Q
+                         net (fo=2, routed)           0.678     4.173    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[3]
+    SLICE_X40Y69         LUT4 (Prop_lut4_I0_O)        0.124     4.297 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/led_state[1]_i_5/O
+                         net (fo=2, routed)           0.950     5.247    LED_BEEP_i/LED_BEEP_TEST_0/inst/led_state[1]_i_5_n_0
+    SLICE_X40Y73         LUT6 (Prop_lut6_I3_O)        0.124     5.371 f  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count[0]_i_7/O
+                         net (fo=25, routed)          1.189     6.560    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count[0]_i_7_n_0
+    SLICE_X41Y69         LUT6 (Prop_lut6_I4_O)        0.124     6.684 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count[0]_i_6/O
+                         net (fo=1, routed)           0.000     6.684    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count[0]_i_6_n_0
+    SLICE_X41Y69         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532     7.216 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[0]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.216    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[0]_i_1_n_0
+    SLICE_X41Y70         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.330 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[4]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.330    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[4]_i_1_n_0
+    SLICE_X41Y71         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.444 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[8]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.444    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[8]_i_1_n_0
+    SLICE_X41Y72         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.558 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[12]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.558    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[12]_i_1_n_0
+    SLICE_X41Y73         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239     7.797 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[16]_i_1/O[2]
+                         net (fo=1, routed)           0.000     7.797    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[16]_i_1_n_5
+    SLICE_X41Y73         FDCE                                         r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[18]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                     20.000    20.000 r  
+    PS7_X0Y0             PS7                          0.000    20.000 r  LED_BEEP_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.101    21.101    LED_BEEP_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    21.192 r  LED_BEEP_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=91, routed)          1.551    22.743    LED_BEEP_i/LED_BEEP_TEST_0/inst/clk
+    SLICE_X41Y73         FDCE                                         r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[18]/C
+                         clock pessimism              0.268    23.011    
+                         clock uncertainty           -0.302    22.709    
+    SLICE_X41Y73         FDCE (Setup_fdce_C_D)        0.062    22.771    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[18]
+  -------------------------------------------------------------------
+                         required time                         22.771    
+                         arrival time                          -7.797    
+  -------------------------------------------------------------------
+                         slack                                 14.974    
+
+Slack (MET) :             14.990ns  (required time - arrival time)
+  Source:                 LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[3]/C
+                            (rising edge-triggered cell FDCE clocked by clk_fpga_0  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[16]/D
+                            (rising edge-triggered cell FDCE clocked by clk_fpga_0  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (clk_fpga_0 rise@20.000ns - clk_fpga_0 rise@0.000ns)
+  Data Path Delay:        4.742ns  (logic 1.925ns (40.595%)  route 2.817ns (59.405%))
+  Logic Levels:           8  (CARRY4=5 LUT4=1 LUT6=2)
+  Clock Path Skew:        -0.028ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.743ns = ( 22.743 - 20.000 ) 
+    Source Clock Delay      (SCD):    3.039ns
+    Clock Pessimism Removal (CPR):    0.268ns
+  Clock Uncertainty:      0.302ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.600ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  LED_BEEP_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.207     1.207    LED_BEEP_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     1.308 r  LED_BEEP_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=91, routed)          1.731     3.039    LED_BEEP_i/LED_BEEP_TEST_0/inst/clk
+    SLICE_X41Y69         FDCE                                         r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X41Y69         FDCE (Prop_fdce_C_Q)         0.456     3.495 f  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[3]/Q
+                         net (fo=2, routed)           0.678     4.173    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[3]
+    SLICE_X40Y69         LUT4 (Prop_lut4_I0_O)        0.124     4.297 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/led_state[1]_i_5/O
+                         net (fo=2, routed)           0.950     5.247    LED_BEEP_i/LED_BEEP_TEST_0/inst/led_state[1]_i_5_n_0
+    SLICE_X40Y73         LUT6 (Prop_lut6_I3_O)        0.124     5.371 f  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count[0]_i_7/O
+                         net (fo=25, routed)          1.189     6.560    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count[0]_i_7_n_0
+    SLICE_X41Y69         LUT6 (Prop_lut6_I4_O)        0.124     6.684 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count[0]_i_6/O
+                         net (fo=1, routed)           0.000     6.684    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count[0]_i_6_n_0
+    SLICE_X41Y69         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532     7.216 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[0]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.216    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[0]_i_1_n_0
+    SLICE_X41Y70         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.330 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[4]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.330    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[4]_i_1_n_0
+    SLICE_X41Y71         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.444 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[8]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.444    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[8]_i_1_n_0
+    SLICE_X41Y72         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.558 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[12]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.558    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[12]_i_1_n_0
+    SLICE_X41Y73         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.223     7.781 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[16]_i_1/O[0]
+                         net (fo=1, routed)           0.000     7.781    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[16]_i_1_n_7
+    SLICE_X41Y73         FDCE                                         r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[16]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                     20.000    20.000 r  
+    PS7_X0Y0             PS7                          0.000    20.000 r  LED_BEEP_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.101    21.101    LED_BEEP_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    21.192 r  LED_BEEP_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=91, routed)          1.551    22.743    LED_BEEP_i/LED_BEEP_TEST_0/inst/clk
+    SLICE_X41Y73         FDCE                                         r  LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[16]/C
+                         clock pessimism              0.268    23.011    
+                         clock uncertainty           -0.302    22.709    
+    SLICE_X41Y73         FDCE (Setup_fdce_C_D)        0.062    22.771    LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[16]
+  -------------------------------------------------------------------
+                         required time                         22.771    
+                         arrival time                          -7.781    
+  -------------------------------------------------------------------
+                         slack                                 14.990    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.188ns  (arrival time - required time)
+  Source:                 LED_BEEP_i/LED_BEEP_TEST_0/inst/voice_mode_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            LED_BEEP_i/LED_BEEP_TEST_0/inst/beep_pwm_reg[15]/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_fpga_0 rise@0.000ns - clk_fpga_0 rise@0.000ns)
+  Data Path Delay:        0.274ns  (logic 0.141ns (51.453%)  route 0.133ns (48.547%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.016ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.229ns
+    Source Clock Delay      (SCD):    0.930ns
+    Clock Pessimism Removal (CPR):    0.283ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  LED_BEEP_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.315     0.315    LED_BEEP_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.341 r  LED_BEEP_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=91, routed)          0.589     0.930    LED_BEEP_i/LED_BEEP_TEST_0/inst/clk
+    SLICE_X41Y90         FDRE                                         r  LED_BEEP_i/LED_BEEP_TEST_0/inst/voice_mode_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X41Y90         FDRE (Prop_fdre_C_Q)         0.141     1.071 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/voice_mode_reg[2]/Q
+                         net (fo=17, routed)          0.133     1.204    LED_BEEP_i/LED_BEEP_TEST_0/inst/voice_mode_reg_n_0_[2]
+    SLICE_X41Y91         FDRE                                         r  LED_BEEP_i/LED_BEEP_TEST_0/inst/beep_pwm_reg[15]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  LED_BEEP_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.341     0.341    LED_BEEP_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     0.370 r  LED_BEEP_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=91, routed)          0.859     1.229    LED_BEEP_i/LED_BEEP_TEST_0/inst/clk
+    SLICE_X41Y91         FDRE                                         r  LED_BEEP_i/LED_BEEP_TEST_0/inst/beep_pwm_reg[15]/C
+                         clock pessimism             -0.283     0.946    
+    SLICE_X41Y91         FDRE (Hold_fdre_C_D)         0.070     1.016    LED_BEEP_i/LED_BEEP_TEST_0/inst/beep_pwm_reg[15]
+  -------------------------------------------------------------------
+                         required time                         -1.016    
+                         arrival time                           1.204    
+  -------------------------------------------------------------------
+                         slack                                  0.188    
+
+Slack (MET) :             0.228ns  (arrival time - required time)
+  Source:                 LED_BEEP_i/LED_BEEP_TEST_0/inst/voice_mode_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            LED_BEEP_i/LED_BEEP_TEST_0/inst/beep_pwm_reg[6]/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_fpga_0 rise@0.000ns - clk_fpga_0 rise@0.000ns)
+  Data Path Delay:        0.375ns  (logic 0.189ns (50.362%)  route 0.186ns (49.638%))
+  Logic Levels:           1  (LUT2=1)
+  Clock Path Skew:        0.016ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.229ns
+    Source Clock Delay      (SCD):    0.930ns
+    Clock Pessimism Removal (CPR):    0.283ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  LED_BEEP_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.315     0.315    LED_BEEP_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.341 r  LED_BEEP_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=91, routed)          0.589     0.930    LED_BEEP_i/LED_BEEP_TEST_0/inst/clk
+    SLICE_X41Y90         FDRE                                         r  LED_BEEP_i/LED_BEEP_TEST_0/inst/voice_mode_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X41Y90         FDRE (Prop_fdre_C_Q)         0.141     1.071 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/voice_mode_reg[0]/Q
+                         net (fo=17, routed)          0.186     1.257    LED_BEEP_i/LED_BEEP_TEST_0/inst/voice_mode_reg_n_0_[0]
+    SLICE_X42Y91         LUT2 (Prop_lut2_I0_O)        0.048     1.305 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/beep_pwm[6]_i_1/O
+                         net (fo=1, routed)           0.000     1.305    LED_BEEP_i/LED_BEEP_TEST_0/inst/beep_pwm[6]_i_1_n_0
+    SLICE_X42Y91         FDRE                                         r  LED_BEEP_i/LED_BEEP_TEST_0/inst/beep_pwm_reg[6]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  LED_BEEP_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.341     0.341    LED_BEEP_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     0.370 r  LED_BEEP_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=91, routed)          0.859     1.229    LED_BEEP_i/LED_BEEP_TEST_0/inst/clk
+    SLICE_X42Y91         FDRE                                         r  LED_BEEP_i/LED_BEEP_TEST_0/inst/beep_pwm_reg[6]/C
+                         clock pessimism             -0.283     0.946    
+    SLICE_X42Y91         FDRE (Hold_fdre_C_D)         0.131     1.077    LED_BEEP_i/LED_BEEP_TEST_0/inst/beep_pwm_reg[6]
+  -------------------------------------------------------------------
+                         required time                         -1.077    
+                         arrival time                           1.305    
+  -------------------------------------------------------------------
+                         slack                                  0.228    
+
+Slack (MET) :             0.236ns  (arrival time - required time)
+  Source:                 LED_BEEP_i/LED_BEEP_TEST_0/inst/voice_mode_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            LED_BEEP_i/LED_BEEP_TEST_0/inst/beep_pwm_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_fpga_0 rise@0.000ns - clk_fpga_0 rise@0.000ns)
+  Data Path Delay:        0.372ns  (logic 0.186ns (49.962%)  route 0.186ns (50.038%))
+  Logic Levels:           1  (LUT3=1)
+  Clock Path Skew:        0.016ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.229ns
+    Source Clock Delay      (SCD):    0.930ns
+    Clock Pessimism Removal (CPR):    0.283ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  LED_BEEP_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.315     0.315    LED_BEEP_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.341 r  LED_BEEP_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=91, routed)          0.589     0.930    LED_BEEP_i/LED_BEEP_TEST_0/inst/clk
+    SLICE_X41Y90         FDRE                                         r  LED_BEEP_i/LED_BEEP_TEST_0/inst/voice_mode_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X41Y90         FDRE (Prop_fdre_C_Q)         0.141     1.071 f  LED_BEEP_i/LED_BEEP_TEST_0/inst/voice_mode_reg[0]/Q
+                         net (fo=17, routed)          0.186     1.257    LED_BEEP_i/LED_BEEP_TEST_0/inst/voice_mode_reg_n_0_[0]
+    SLICE_X42Y91         LUT3 (Prop_lut3_I0_O)        0.045     1.302 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/beep_pwm[0]_i_1/O
+                         net (fo=1, routed)           0.000     1.302    LED_BEEP_i/LED_BEEP_TEST_0/inst/beep_pwm[0]_i_1_n_0
+    SLICE_X42Y91         FDRE                                         r  LED_BEEP_i/LED_BEEP_TEST_0/inst/beep_pwm_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  LED_BEEP_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.341     0.341    LED_BEEP_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     0.370 r  LED_BEEP_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=91, routed)          0.859     1.229    LED_BEEP_i/LED_BEEP_TEST_0/inst/clk
+    SLICE_X42Y91         FDRE                                         r  LED_BEEP_i/LED_BEEP_TEST_0/inst/beep_pwm_reg[0]/C
+                         clock pessimism             -0.283     0.946    
+    SLICE_X42Y91         FDRE (Hold_fdre_C_D)         0.120     1.066    LED_BEEP_i/LED_BEEP_TEST_0/inst/beep_pwm_reg[0]
+  -------------------------------------------------------------------
+                         required time                         -1.066    
+                         arrival time                           1.302    
+  -------------------------------------------------------------------
+                         slack                                  0.236    
+
+Slack (MET) :             0.252ns  (arrival time - required time)
+  Source:                 LED_BEEP_i/LED_BEEP_TEST_0/inst/beep_time_count_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            LED_BEEP_i/LED_BEEP_TEST_0/inst/beep_time_count_reg[3]/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_fpga_0 rise@0.000ns - clk_fpga_0 rise@0.000ns)
+  Data Path Delay:        0.357ns  (logic 0.249ns (69.714%)  route 0.108ns (30.286%))
+  Logic Levels:           1  (CARRY4=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.226ns
+    Source Clock Delay      (SCD):    0.928ns
+    Clock Pessimism Removal (CPR):    0.298ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  LED_BEEP_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.315     0.315    LED_BEEP_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.341 r  LED_BEEP_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=91, routed)          0.587     0.928    LED_BEEP_i/LED_BEEP_TEST_0/inst/clk
+    SLICE_X43Y87         FDRE                                         r  LED_BEEP_i/LED_BEEP_TEST_0/inst/beep_time_count_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X43Y87         FDRE (Prop_fdre_C_Q)         0.141     1.069 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/beep_time_count_reg[3]/Q
+                         net (fo=1, routed)           0.108     1.177    LED_BEEP_i/LED_BEEP_TEST_0/inst/beep_time_count_reg_n_0_[3]
+    SLICE_X43Y87         CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.108     1.285 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/beep_time_count_reg[0]_i_2/O[3]
+                         net (fo=1, routed)           0.000     1.285    LED_BEEP_i/LED_BEEP_TEST_0/inst/beep_time_count_reg[0]_i_2_n_4
+    SLICE_X43Y87         FDRE                                         r  LED_BEEP_i/LED_BEEP_TEST_0/inst/beep_time_count_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  LED_BEEP_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.341     0.341    LED_BEEP_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     0.370 r  LED_BEEP_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=91, routed)          0.856     1.226    LED_BEEP_i/LED_BEEP_TEST_0/inst/clk
+    SLICE_X43Y87         FDRE                                         r  LED_BEEP_i/LED_BEEP_TEST_0/inst/beep_time_count_reg[3]/C
+                         clock pessimism             -0.298     0.928    
+    SLICE_X43Y87         FDRE (Hold_fdre_C_D)         0.105     1.033    LED_BEEP_i/LED_BEEP_TEST_0/inst/beep_time_count_reg[3]
+  -------------------------------------------------------------------
+                         required time                         -1.033    
+                         arrival time                           1.285    
+  -------------------------------------------------------------------
+                         slack                                  0.252    
+
+Slack (MET) :             0.256ns  (arrival time - required time)
+  Source:                 LED_BEEP_i/LED_BEEP_TEST_0/inst/beep_time_count_reg[4]/C
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            LED_BEEP_i/LED_BEEP_TEST_0/inst/beep_time_count_reg[4]/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_fpga_0 rise@0.000ns - clk_fpga_0 rise@0.000ns)
+  Data Path Delay:        0.361ns  (logic 0.256ns (70.880%)  route 0.105ns (29.120%))
+  Logic Levels:           1  (CARRY4=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.228ns
+    Source Clock Delay      (SCD):    0.929ns
+    Clock Pessimism Removal (CPR):    0.299ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  LED_BEEP_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.315     0.315    LED_BEEP_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.341 r  LED_BEEP_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=91, routed)          0.588     0.929    LED_BEEP_i/LED_BEEP_TEST_0/inst/clk
+    SLICE_X43Y88         FDRE                                         r  LED_BEEP_i/LED_BEEP_TEST_0/inst/beep_time_count_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X43Y88         FDRE (Prop_fdre_C_Q)         0.141     1.070 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/beep_time_count_reg[4]/Q
+                         net (fo=1, routed)           0.105     1.175    LED_BEEP_i/LED_BEEP_TEST_0/inst/beep_time_count_reg_n_0_[4]
+    SLICE_X43Y88         CARRY4 (Prop_carry4_S[0]_O[0])
+                                                      0.115     1.290 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/beep_time_count_reg[4]_i_1/O[0]
+                         net (fo=1, routed)           0.000     1.290    LED_BEEP_i/LED_BEEP_TEST_0/inst/beep_time_count_reg[4]_i_1_n_7
+    SLICE_X43Y88         FDRE                                         r  LED_BEEP_i/LED_BEEP_TEST_0/inst/beep_time_count_reg[4]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  LED_BEEP_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.341     0.341    LED_BEEP_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     0.370 r  LED_BEEP_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=91, routed)          0.858     1.228    LED_BEEP_i/LED_BEEP_TEST_0/inst/clk
+    SLICE_X43Y88         FDRE                                         r  LED_BEEP_i/LED_BEEP_TEST_0/inst/beep_time_count_reg[4]/C
+                         clock pessimism             -0.299     0.929    
+    SLICE_X43Y88         FDRE (Hold_fdre_C_D)         0.105     1.034    LED_BEEP_i/LED_BEEP_TEST_0/inst/beep_time_count_reg[4]
+  -------------------------------------------------------------------
+                         required time                         -1.034    
+                         arrival time                           1.290    
+  -------------------------------------------------------------------
+                         slack                                  0.256    
+
+Slack (MET) :             0.256ns  (arrival time - required time)
+  Source:                 LED_BEEP_i/LED_BEEP_TEST_0/inst/beep_time_count_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            LED_BEEP_i/LED_BEEP_TEST_0/inst/beep_time_count_reg[2]/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_fpga_0 rise@0.000ns - clk_fpga_0 rise@0.000ns)
+  Data Path Delay:        0.361ns  (logic 0.252ns (69.733%)  route 0.109ns (30.267%))
+  Logic Levels:           1  (CARRY4=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.226ns
+    Source Clock Delay      (SCD):    0.928ns
+    Clock Pessimism Removal (CPR):    0.298ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  LED_BEEP_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.315     0.315    LED_BEEP_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.341 r  LED_BEEP_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=91, routed)          0.587     0.928    LED_BEEP_i/LED_BEEP_TEST_0/inst/clk
+    SLICE_X43Y87         FDRE                                         r  LED_BEEP_i/LED_BEEP_TEST_0/inst/beep_time_count_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X43Y87         FDRE (Prop_fdre_C_Q)         0.141     1.069 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/beep_time_count_reg[2]/Q
+                         net (fo=1, routed)           0.109     1.178    LED_BEEP_i/LED_BEEP_TEST_0/inst/beep_time_count_reg_n_0_[2]
+    SLICE_X43Y87         CARRY4 (Prop_carry4_S[2]_O[2])
+                                                      0.111     1.289 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/beep_time_count_reg[0]_i_2/O[2]
+                         net (fo=1, routed)           0.000     1.289    LED_BEEP_i/LED_BEEP_TEST_0/inst/beep_time_count_reg[0]_i_2_n_5
+    SLICE_X43Y87         FDRE                                         r  LED_BEEP_i/LED_BEEP_TEST_0/inst/beep_time_count_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  LED_BEEP_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.341     0.341    LED_BEEP_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     0.370 r  LED_BEEP_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=91, routed)          0.856     1.226    LED_BEEP_i/LED_BEEP_TEST_0/inst/clk
+    SLICE_X43Y87         FDRE                                         r  LED_BEEP_i/LED_BEEP_TEST_0/inst/beep_time_count_reg[2]/C
+                         clock pessimism             -0.298     0.928    
+    SLICE_X43Y87         FDRE (Hold_fdre_C_D)         0.105     1.033    LED_BEEP_i/LED_BEEP_TEST_0/inst/beep_time_count_reg[2]
+  -------------------------------------------------------------------
+                         required time                         -1.033    
+                         arrival time                           1.289    
+  -------------------------------------------------------------------
+                         slack                                  0.256    
+
+Slack (MET) :             0.264ns  (arrival time - required time)
+  Source:                 LED_BEEP_i/LED_BEEP_TEST_0/inst/beep_reg/C
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            LED_BEEP_i/LED_BEEP_TEST_0/inst/beep_reg/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_fpga_0 rise@0.000ns - clk_fpga_0 rise@0.000ns)
+  Data Path Delay:        0.384ns  (logic 0.209ns (54.384%)  route 0.175ns (45.616%))
+  Logic Levels:           1  (LUT2=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.230ns
+    Source Clock Delay      (SCD):    0.931ns
+    Clock Pessimism Removal (CPR):    0.299ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  LED_BEEP_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.315     0.315    LED_BEEP_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.341 r  LED_BEEP_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=91, routed)          0.590     0.931    LED_BEEP_i/LED_BEEP_TEST_0/inst/clk
+    SLICE_X42Y93         FDRE                                         r  LED_BEEP_i/LED_BEEP_TEST_0/inst/beep_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X42Y93         FDRE (Prop_fdre_C_Q)         0.164     1.095 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/beep_reg/Q
+                         net (fo=2, routed)           0.175     1.270    LED_BEEP_i/LED_BEEP_TEST_0/inst/beep
+    SLICE_X42Y93         LUT2 (Prop_lut2_I1_O)        0.045     1.315 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/beep_i_1/O
+                         net (fo=1, routed)           0.000     1.315    LED_BEEP_i/LED_BEEP_TEST_0/inst/beep_i_1_n_0
+    SLICE_X42Y93         FDRE                                         r  LED_BEEP_i/LED_BEEP_TEST_0/inst/beep_reg/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  LED_BEEP_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.341     0.341    LED_BEEP_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     0.370 r  LED_BEEP_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=91, routed)          0.860     1.230    LED_BEEP_i/LED_BEEP_TEST_0/inst/clk
+    SLICE_X42Y93         FDRE                                         r  LED_BEEP_i/LED_BEEP_TEST_0/inst/beep_reg/C
+                         clock pessimism             -0.299     0.931    
+    SLICE_X42Y93         FDRE (Hold_fdre_C_D)         0.120     1.051    LED_BEEP_i/LED_BEEP_TEST_0/inst/beep_reg
+  -------------------------------------------------------------------
+                         required time                         -1.051    
+                         arrival time                           1.315    
+  -------------------------------------------------------------------
+                         slack                                  0.264    
+
+Slack (MET) :             0.264ns  (arrival time - required time)
+  Source:                 LED_BEEP_i/LED_BEEP_TEST_0/inst/beep_time_count_reg[19]/C
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            LED_BEEP_i/LED_BEEP_TEST_0/inst/beep_time_count_reg[19]/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_fpga_0 rise@0.000ns - clk_fpga_0 rise@0.000ns)
+  Data Path Delay:        0.369ns  (logic 0.249ns (67.424%)  route 0.120ns (32.576%))
+  Logic Levels:           1  (CARRY4=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.229ns
+    Source Clock Delay      (SCD):    0.930ns
+    Clock Pessimism Removal (CPR):    0.299ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  LED_BEEP_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.315     0.315    LED_BEEP_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.341 r  LED_BEEP_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=91, routed)          0.589     0.930    LED_BEEP_i/LED_BEEP_TEST_0/inst/clk
+    SLICE_X43Y91         FDRE                                         r  LED_BEEP_i/LED_BEEP_TEST_0/inst/beep_time_count_reg[19]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X43Y91         FDRE (Prop_fdre_C_Q)         0.141     1.071 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/beep_time_count_reg[19]/Q
+                         net (fo=2, routed)           0.120     1.191    LED_BEEP_i/LED_BEEP_TEST_0/inst/beep_time_count_reg[19]
+    SLICE_X43Y91         CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.108     1.299 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/beep_time_count_reg[16]_i_1/O[3]
+                         net (fo=1, routed)           0.000     1.299    LED_BEEP_i/LED_BEEP_TEST_0/inst/beep_time_count_reg[16]_i_1_n_4
+    SLICE_X43Y91         FDRE                                         r  LED_BEEP_i/LED_BEEP_TEST_0/inst/beep_time_count_reg[19]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  LED_BEEP_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.341     0.341    LED_BEEP_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     0.370 r  LED_BEEP_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=91, routed)          0.859     1.229    LED_BEEP_i/LED_BEEP_TEST_0/inst/clk
+    SLICE_X43Y91         FDRE                                         r  LED_BEEP_i/LED_BEEP_TEST_0/inst/beep_time_count_reg[19]/C
+                         clock pessimism             -0.299     0.930    
+    SLICE_X43Y91         FDRE (Hold_fdre_C_D)         0.105     1.035    LED_BEEP_i/LED_BEEP_TEST_0/inst/beep_time_count_reg[19]
+  -------------------------------------------------------------------
+                         required time                         -1.035    
+                         arrival time                           1.299    
+  -------------------------------------------------------------------
+                         slack                                  0.264    
+
+Slack (MET) :             0.264ns  (arrival time - required time)
+  Source:                 LED_BEEP_i/LED_BEEP_TEST_0/inst/beep_time_count_reg[23]/C
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            LED_BEEP_i/LED_BEEP_TEST_0/inst/beep_time_count_reg[23]/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_fpga_0 rise@0.000ns - clk_fpga_0 rise@0.000ns)
+  Data Path Delay:        0.369ns  (logic 0.249ns (67.424%)  route 0.120ns (32.576%))
+  Logic Levels:           1  (CARRY4=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.229ns
+    Source Clock Delay      (SCD):    0.930ns
+    Clock Pessimism Removal (CPR):    0.299ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  LED_BEEP_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.315     0.315    LED_BEEP_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.341 r  LED_BEEP_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=91, routed)          0.589     0.930    LED_BEEP_i/LED_BEEP_TEST_0/inst/clk
+    SLICE_X43Y92         FDRE                                         r  LED_BEEP_i/LED_BEEP_TEST_0/inst/beep_time_count_reg[23]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X43Y92         FDRE (Prop_fdre_C_Q)         0.141     1.071 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/beep_time_count_reg[23]/Q
+                         net (fo=5, routed)           0.120     1.191    LED_BEEP_i/LED_BEEP_TEST_0/inst/beep_time_count_reg[23]
+    SLICE_X43Y92         CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.108     1.299 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/beep_time_count_reg[20]_i_1/O[3]
+                         net (fo=1, routed)           0.000     1.299    LED_BEEP_i/LED_BEEP_TEST_0/inst/beep_time_count_reg[20]_i_1_n_4
+    SLICE_X43Y92         FDRE                                         r  LED_BEEP_i/LED_BEEP_TEST_0/inst/beep_time_count_reg[23]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  LED_BEEP_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.341     0.341    LED_BEEP_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     0.370 r  LED_BEEP_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=91, routed)          0.859     1.229    LED_BEEP_i/LED_BEEP_TEST_0/inst/clk
+    SLICE_X43Y92         FDRE                                         r  LED_BEEP_i/LED_BEEP_TEST_0/inst/beep_time_count_reg[23]/C
+                         clock pessimism             -0.299     0.930    
+    SLICE_X43Y92         FDRE (Hold_fdre_C_D)         0.105     1.035    LED_BEEP_i/LED_BEEP_TEST_0/inst/beep_time_count_reg[23]
+  -------------------------------------------------------------------
+                         required time                         -1.035    
+                         arrival time                           1.299    
+  -------------------------------------------------------------------
+                         slack                                  0.264    
+
+Slack (MET) :             0.264ns  (arrival time - required time)
+  Source:                 LED_BEEP_i/LED_BEEP_TEST_0/inst/beep_time_count_reg[11]/C
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            LED_BEEP_i/LED_BEEP_TEST_0/inst/beep_time_count_reg[11]/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_fpga_0 rise@0.000ns - clk_fpga_0 rise@0.000ns)
+  Data Path Delay:        0.369ns  (logic 0.249ns (67.424%)  route 0.120ns (32.576%))
+  Logic Levels:           1  (CARRY4=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.228ns
+    Source Clock Delay      (SCD):    0.929ns
+    Clock Pessimism Removal (CPR):    0.299ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  LED_BEEP_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.315     0.315    LED_BEEP_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.341 r  LED_BEEP_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=91, routed)          0.588     0.929    LED_BEEP_i/LED_BEEP_TEST_0/inst/clk
+    SLICE_X43Y89         FDRE                                         r  LED_BEEP_i/LED_BEEP_TEST_0/inst/beep_time_count_reg[11]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X43Y89         FDRE (Prop_fdre_C_Q)         0.141     1.070 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/beep_time_count_reg[11]/Q
+                         net (fo=3, routed)           0.120     1.190    LED_BEEP_i/LED_BEEP_TEST_0/inst/beep_time_count_reg[11]
+    SLICE_X43Y89         CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.108     1.298 r  LED_BEEP_i/LED_BEEP_TEST_0/inst/beep_time_count_reg[8]_i_1/O[3]
+                         net (fo=1, routed)           0.000     1.298    LED_BEEP_i/LED_BEEP_TEST_0/inst/beep_time_count_reg[8]_i_1_n_4
+    SLICE_X43Y89         FDRE                                         r  LED_BEEP_i/LED_BEEP_TEST_0/inst/beep_time_count_reg[11]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  LED_BEEP_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.341     0.341    LED_BEEP_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     0.370 r  LED_BEEP_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=91, routed)          0.858     1.228    LED_BEEP_i/LED_BEEP_TEST_0/inst/clk
+    SLICE_X43Y89         FDRE                                         r  LED_BEEP_i/LED_BEEP_TEST_0/inst/beep_time_count_reg[11]/C
+                         clock pessimism             -0.299     0.929    
+    SLICE_X43Y89         FDRE (Hold_fdre_C_D)         0.105     1.034    LED_BEEP_i/LED_BEEP_TEST_0/inst/beep_time_count_reg[11]
+  -------------------------------------------------------------------
+                         required time                         -1.034    
+                         arrival time                           1.298    
+  -------------------------------------------------------------------
+                         slack                                  0.264    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         clk_fpga_0
+Waveform(ns):       { 0.000 10.000 }
+Period(ns):         20.000
+Sources:            { LED_BEEP_i/processing_system7_0/inst/PS7_i/FCLKCLK[0] }
+
+Check Type        Corner  Lib Pin  Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location       Pin
+Min Period        n/a     BUFG/I   n/a            2.155         20.000      17.845     BUFGCTRL_X0Y0  LED_BEEP_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/I
+Min Period        n/a     FDCE/C   n/a            1.000         20.000      19.000     SLICE_X41Y73   LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[19]/C
+Min Period        n/a     FDCE/C   n/a            1.000         20.000      19.000     SLICE_X41Y69   LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[1]/C
+Min Period        n/a     FDCE/C   n/a            1.000         20.000      19.000     SLICE_X41Y74   LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[20]/C
+Min Period        n/a     FDCE/C   n/a            1.000         20.000      19.000     SLICE_X41Y74   LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[21]/C
+Min Period        n/a     FDCE/C   n/a            1.000         20.000      19.000     SLICE_X41Y74   LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[22]/C
+Min Period        n/a     FDCE/C   n/a            1.000         20.000      19.000     SLICE_X41Y74   LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[23]/C
+Min Period        n/a     FDCE/C   n/a            1.000         20.000      19.000     SLICE_X41Y75   LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[24]/C
+Min Period        n/a     FDCE/C   n/a            1.000         20.000      19.000     SLICE_X41Y75   LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[25]/C
+Min Period        n/a     FDCE/C   n/a            1.000         20.000      19.000     SLICE_X41Y69   LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[2]/C
+Low Pulse Width   Slow    FDCE/C   n/a            0.500         10.000      9.500      SLICE_X41Y74   LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[20]/C
+Low Pulse Width   Slow    FDCE/C   n/a            0.500         10.000      9.500      SLICE_X41Y74   LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[21]/C
+Low Pulse Width   Slow    FDCE/C   n/a            0.500         10.000      9.500      SLICE_X41Y74   LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[22]/C
+Low Pulse Width   Slow    FDCE/C   n/a            0.500         10.000      9.500      SLICE_X41Y74   LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[23]/C
+Low Pulse Width   Slow    FDCE/C   n/a            0.500         10.000      9.500      SLICE_X41Y75   LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[24]/C
+Low Pulse Width   Slow    FDCE/C   n/a            0.500         10.000      9.500      SLICE_X41Y75   LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[25]/C
+Low Pulse Width   Slow    FDRE/C   n/a            0.500         10.000      9.500      SLICE_X40Y90   LED_BEEP_i/LED_BEEP_TEST_0/inst/beep_pwm_count_reg[3]/C
+Low Pulse Width   Fast    FDRE/C   n/a            0.500         10.000      9.500      SLICE_X40Y90   LED_BEEP_i/LED_BEEP_TEST_0/inst/beep_pwm_count_reg[3]/C
+Low Pulse Width   Slow    FDRE/C   n/a            0.500         10.000      9.500      SLICE_X40Y91   LED_BEEP_i/LED_BEEP_TEST_0/inst/beep_pwm_count_reg[4]/C
+Low Pulse Width   Fast    FDRE/C   n/a            0.500         10.000      9.500      SLICE_X40Y91   LED_BEEP_i/LED_BEEP_TEST_0/inst/beep_pwm_count_reg[4]/C
+High Pulse Width  Slow    FDCE/C   n/a            0.500         10.000      9.500      SLICE_X41Y73   LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[19]/C
+High Pulse Width  Fast    FDCE/C   n/a            0.500         10.000      9.500      SLICE_X41Y73   LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[19]/C
+High Pulse Width  Slow    FDCE/C   n/a            0.500         10.000      9.500      SLICE_X41Y69   LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[1]/C
+High Pulse Width  Fast    FDCE/C   n/a            0.500         10.000      9.500      SLICE_X41Y69   LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[1]/C
+High Pulse Width  Slow    FDCE/C   n/a            0.500         10.000      9.500      SLICE_X41Y74   LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[20]/C
+High Pulse Width  Slow    FDCE/C   n/a            0.500         10.000      9.500      SLICE_X41Y74   LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[21]/C
+High Pulse Width  Slow    FDCE/C   n/a            0.500         10.000      9.500      SLICE_X41Y74   LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[22]/C
+High Pulse Width  Slow    FDCE/C   n/a            0.500         10.000      9.500      SLICE_X41Y74   LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[23]/C
+High Pulse Width  Slow    FDCE/C   n/a            0.500         10.000      9.500      SLICE_X41Y75   LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[24]/C
+High Pulse Width  Slow    FDCE/C   n/a            0.500         10.000      9.500      SLICE_X41Y75   LED_BEEP_i/LED_BEEP_TEST_0/inst/LED_time_count_reg[25]/C
+
+
+

@@ -1,0 +1,233 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0xB10F7D0B19F04BBE",
+      "device": "xc7z010clg400-1",
+      "name": "LED_BEEP",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2018.3",
+      "validated": "true"
+    },
+    "design_tree": {
+      "processing_system7_0": "",
+      "LED_BEEP_TEST_0": ""
+    },
+    "interface_ports": {
+      "DDR": {
+        "mode": "Master",
+        "vlnv": "xilinx.com:interface:ddrx_rtl:1.0",
+        "parameters": {
+          "AXI_ARBITRATION_SCHEME": {
+            "value": "TDM",
+            "value_src": "default"
+          },
+          "BURST_LENGTH": {
+            "value": "8",
+            "value_src": "default"
+          },
+          "CAN_DEBUG": {
+            "value": "false",
+            "value_src": "default"
+          },
+          "CAS_LATENCY": {
+            "value": "11",
+            "value_src": "default"
+          },
+          "CAS_WRITE_LATENCY": {
+            "value": "11",
+            "value_src": "default"
+          },
+          "CS_ENABLED": {
+            "value": "true",
+            "value_src": "default"
+          },
+          "DATA_MASK_ENABLED": {
+            "value": "true",
+            "value_src": "default"
+          },
+          "DATA_WIDTH": {
+            "value": "8",
+            "value_src": "default"
+          },
+          "MEMORY_TYPE": {
+            "value": "COMPONENTS",
+            "value_src": "default"
+          },
+          "MEM_ADDR_MAP": {
+            "value": "ROW_COLUMN_BANK",
+            "value_src": "default"
+          },
+          "SLOT": {
+            "value": "Single",
+            "value_src": "default"
+          },
+          "TIMEPERIOD_PS": {
+            "value": "1250",
+            "value_src": "default"
+          }
+        }
+      },
+      "FIXED_IO": {
+        "mode": "Master",
+        "vlnv": "xilinx.com:display_processing_system7:fixedio_rtl:1.0",
+        "parameters": {
+          "CAN_DEBUG": {
+            "value": "false",
+            "value_src": "default"
+          }
+        }
+      }
+    },
+    "ports": {
+      "LED1_0": {
+        "direction": "O"
+      },
+      "LED2_0": {
+        "direction": "O"
+      },
+      "LED3_0": {
+        "direction": "O"
+      },
+      "beep_0": {
+        "direction": "O"
+      }
+    },
+    "components": {
+      "processing_system7_0": {
+        "vlnv": "xilinx.com:ip:processing_system7:5.5",
+        "xci_name": "LED_BEEP_processing_system7_0_0",
+        "parameters": {
+          "PCW_DDR_RAM_HIGHADDR": {
+            "value": "0x0FFFFFFF"
+          },
+          "PCW_FPGA_FCLK0_ENABLE": {
+            "value": "1"
+          },
+          "PCW_UIPARAM_DDR_BUS_WIDTH": {
+            "value": "16 Bit"
+          },
+          "PCW_UIPARAM_DDR_ECC": {
+            "value": "Disabled"
+          },
+          "PCW_UIPARAM_DDR_PARTNO": {
+            "value": "MT41K128M16 JT-125"
+          }
+        }
+      },
+      "LED_BEEP_TEST_0": {
+        "vlnv": "xilinx.com:module_ref:LED_BEEP_TEST:1.0",
+        "xci_name": "LED_BEEP_LED_BEEP_TEST_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "LED_BEEP_TEST",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "RSTn",
+                "value_src": "constant"
+              },
+              "CLK_DOMAIN": {
+                "value": "LED_BEEP_processing_system7_0_0_FCLK_CLK0",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "50000000",
+                "value_src": "user_prop"
+              }
+            }
+          },
+          "RSTn": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "LED1": {
+            "direction": "O"
+          },
+          "LED2": {
+            "direction": "O"
+          },
+          "LED3": {
+            "direction": "O"
+          },
+          "beep": {
+            "direction": "O"
+          }
+        }
+      }
+    },
+    "interface_nets": {
+      "processing_system7_0_FIXED_IO": {
+        "interface_ports": [
+          "FIXED_IO",
+          "processing_system7_0/FIXED_IO"
+        ]
+      },
+      "processing_system7_0_DDR": {
+        "interface_ports": [
+          "DDR",
+          "processing_system7_0/DDR"
+        ]
+      }
+    },
+    "nets": {
+      "processing_system7_0_FCLK_CLK0": {
+        "ports": [
+          "processing_system7_0/FCLK_CLK0",
+          "processing_system7_0/M_AXI_GP0_ACLK",
+          "LED_BEEP_TEST_0/clk"
+        ]
+      },
+      "processing_system7_0_FCLK_RESET0_N": {
+        "ports": [
+          "processing_system7_0/FCLK_RESET0_N",
+          "LED_BEEP_TEST_0/RSTn"
+        ]
+      },
+      "LED_BEEP_TEST_0_LED1": {
+        "ports": [
+          "LED_BEEP_TEST_0/LED1",
+          "LED1_0"
+        ]
+      },
+      "LED_BEEP_TEST_0_LED2": {
+        "ports": [
+          "LED_BEEP_TEST_0/LED2",
+          "LED2_0"
+        ]
+      },
+      "LED_BEEP_TEST_0_LED3": {
+        "ports": [
+          "LED_BEEP_TEST_0/LED3",
+          "LED3_0"
+        ]
+      },
+      "LED_BEEP_TEST_0_beep": {
+        "ports": [
+          "LED_BEEP_TEST_0/beep",
+          "beep_0"
+        ]
+      }
+    },
+    "addressing": {
+      "/processing_system7_0": {
+        "address_spaces": {
+          "Data": {
+            "range": "4G",
+            "width": "32"
+          }
+        }
+      }
+    }
+  }
+}

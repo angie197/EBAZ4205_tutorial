@@ -1,0 +1,7 @@
+//arch = zynq; split = false; format = BIN
+the_ROM_image:
+{
+	[bootloader]E:\3_EBAZ4205\ZYNQ_PROJECT\EBAZ4205\11_TF_CARD_BOOT\TF_CARD_BOOT\TF_CARD_BOOT.sdk\FSBL\Debug\FSBL.elf
+	E:\3_EBAZ4205\ZYNQ_PROJECT\EBAZ4205\11_TF_CARD_BOOT\TF_CARD_BOOT\TF_CARD_BOOT.sdk\zynq_wrapper_hw_platform_0\zynq_wrapper.bit
+	E:\3_EBAZ4205\ZYNQ_PROJECT\EBAZ4205\11_TF_CARD_BOOT\TF_CARD_BOOT\TF_CARD_BOOT.sdk\LED\Debug\LED.elf
+}

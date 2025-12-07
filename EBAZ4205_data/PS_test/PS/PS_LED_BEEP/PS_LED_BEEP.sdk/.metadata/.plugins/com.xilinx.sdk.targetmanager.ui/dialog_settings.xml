@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="" key="LED_BEEP_wrapper_hw_platform_0-bmmFile"/>
+	<item value="Local" key="LED_BEEP_wrapper_hw_platform_0-target"/>
+	<item value="Auto Detect" key="LED_BEEP_wrapper_hw_platform_0-device"/>
+	<item value="LED_BEEP_wrapper_hw_platform_0" key="programfpga.hwplatform"/>
+	<item value="LED_BEEP_wrapper.bit" key="LED_BEEP_wrapper_hw_platform_0-bitFile"/>
+	<item value="false" key="LED_BEEP_wrapper_hw_platform_0-partial_bit"/>
+</section>
