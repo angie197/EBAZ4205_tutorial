@@ -14,12 +14,13 @@ EBAZ4205（Zynq-7000 SoC搭載ボード）を使用したFPGA/SoC開発チュー
 ## ディレクトリ構成
 
 ```
-EBZA4205_tutorial/
-├── EBAZ4205_data/          # データシート・回路図・リファレンス資料
-│   ├── EBAZ4205-Instruction.pdf
-│   ├── EBAZ4205-SCH.pdf
-│   ├── EBAZ4205_schematic.pdf
-│   ├── ug585-Zynq-7000-TRM.pdf
+EBAZ4205_tutorial/
+├── documents/              # データシート・回路図・リファレンス資料・ブートイメージ等
+│   ├── EBAZ4205/            # ボード資料（回路図、説明書、イメージ等）
+│   ├── xilinx_user_guide/   # Xilinx公式User Guide
+│   ├── TF_boot_image/       # ブートイメージ
+│   ├── ether_phy/           # Ethernet PHY関連資料
+│   ├── adapter/             # アダプタ/検証用資材
 │   └── ...
 ├── tutorials/              # チュートリアルプロジェクト
 │   ├── 01_blink/          # LED点滅（基本）
@@ -79,12 +80,12 @@ PS側からのLCD制御テストプロジェクトです。
 
 ## 参考資料
 
-`EBAZ4205_data/`フォルダに以下の資料が含まれています：
+`documents/`フォルダに以下の資料が含まれています：
 
-- EBAZ4205回路図
-- Zynq-7000 TRM（テクニカルリファレンスマニュアル）
-- ボード説明書
-- Linuxブートイメージ
+- EBAZ4205回路図・説明書・PCBデータ・Linuxイメージ（`documents/EBAZ4205/`）
+- Zynq-7000 TRM（テクニカルリファレンスマニュアル）（`documents/xilinx_user_guide/`）
+- ブートイメージ（`documents/TF_boot_image/`）
+- Ethernet PHY資料（`documents/ether_phy/`）
 
 ## ライセンス
 

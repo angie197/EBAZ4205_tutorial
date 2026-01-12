@@ -1,2 +1,0 @@
-NumberHits:8
-Timestamp: Mon Apr 01 12:42:29 UTC 2024

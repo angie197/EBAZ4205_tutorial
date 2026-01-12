@@ -1,9 +1,0 @@
-timestamp=[2024-03-31 11:11:00], mode=WORKBENCH_START, duration=0:00:12.890, duration_ms=12890, data={}
-timestamp=[2024-03-31 11:11:00], mode=WORKBENCH_UI_INIT, duration=0:00:00.068, duration_ms=68, data={editors_count=0, platform_editors_count=0, projects_count=0, platform_projects_count=0, active_platform_editor=false, projects=}
-timestamp=[2024-03-31 11:11:05], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:01.946, duration_ms=1946, data={}
-timestamp=[2024-03-31 11:13:53], mode=APP_CREATION, duration=0:01:42.868, duration_ms=102868, data={name=hello, project_type=sdk, os=standalone, processor=ps7_cortexa9, runtime=cpp, platform=EBAZ4205_1, application_type=application}
-timestamp=[2024-03-31 11:18:37], mode=PLATFORM_GENERATION, duration=0:03:34.290, duration_ms=214290, data={name=EBAZ4205_1}
-timestamp=[2024-03-31 11:20:17], mode=BUILD, duration=0:00:05.720, duration_ms=5720, data={name=hello, configuration=Debug, clean_build=false}
-timestamp=[2024-03-31 11:20:37], mode=BUILD, duration=0:00:19.653, duration_ms=19653, data={name=hello_system, configuration=Debug, clean_build=false}
-timestamp=[2024-03-31 11:21:21], mode=BUILD, duration=0:00:02.496, duration_ms=2496, data={name=hello, configuration=Debug, clean_build=false}
-timestamp=[2024-03-31 11:21:36], mode=BUILD, duration=0:00:15.133, duration_ms=15133, data={name=hello_system, configuration=Debug, clean_build=false}
