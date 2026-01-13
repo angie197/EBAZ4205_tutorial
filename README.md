@@ -1,98 +1,100 @@
 # EBAZ4205 Tutorial
 
-EBAZ4205（Zynq-7000 SoC搭載ボード）を使用したFPGA/SoC開発チュートリアル集です。
+English | [日本語](README_JP.md)
 
-## 概要
+A collection of FPGA/SoC development tutorials using EBAZ4205 (a board with a Zynq-7000 SoC).
 
-このリポジトリは、EBAZ4205ボードを使用してXilinx Zynq-7000 SoCの開発を学ぶためのチュートリアルプロジェクトを含んでいます。
+## Overview
 
-### ターゲットデバイス
+This repository contains tutorial projects to learn development for the Xilinx Zynq-7000 SoC using the EBAZ4205 board.
+
+### Target Device
 
 - **SoC**: Xilinx Zynq-7000 (xc7z010clg400-1)
-- **ボード**: EBAZ4205
+- **Board**: EBAZ4205
 
-## ディレクトリ構成
+## Directory Structure
 
 ```
 EBAZ4205_tutorial/
-├── documents/              # データシート・回路図・リファレンス資料・ブートイメージ等
-│   ├── EBAZ4205/            # ボード資料（回路図、説明書、イメージ等）
-│   ├── xilinx_user_guide/   # Xilinx公式User Guide
-│   ├── TF_boot_image/       # ブートイメージ
-│   ├── ether_phy/           # Ethernet PHY関連資料
-│   ├── adapter/             # アダプタ/検証用資材
+├── documents/              # Datasheets, schematics, reference materials, boot images, etc.
+│   ├── EBAZ4205/            # Board materials (schematics, manuals, images, etc.)
+│   ├── xilinx_user_guide/   # Official Xilinx User Guides
+│   ├── TF_boot_image/       # Boot images
+│   ├── ether_phy/           # Ethernet PHY-related documents
+│   ├── adapter/             # Adapter / verification materials
 │   └── ...
-├── tutorials/              # チュートリアルプロジェクト
-│   ├── 01_blink/          # LED点滅（基本）
-│   ├── 02_blinkspeed/     # LED点滅速度制御
-│   ├── 03_pattern/        # パターン表示（HDMI出力）
-│   ├── 04_gradation/      # グラデーション表示（HDMI出力）
-│   ├── 05_Zynq7000/       # Zynq PS+PL統合プロジェクト
-│   └── PS_LCD_test/       # PS側LCDテスト
+├── tutorials/              # Tutorial projects
+│   ├── 01_blink/          # LED blinking (basic)
+│   ├── 02_blinkspeed/     # LED blink speed control
+│   ├── 03_pattern/        # Pattern display (HDMI output)
+│   ├── 04_gradation/      # Gradation display (HDMI output)
+│   ├── 05_Zynq7000/       # Zynq PS+PL integrated project
+│   └── PS_LCD_test/       # PS-side LCD test
 └── LICENSE
 ```
 
-## チュートリアル内容
+## Tutorial Contents
 
 ### 01_blink
 
-RGB LEDの点滅制御を行う基本的なPLプロジェクトです。
+A basic PL project to control RGB LED blinking.
 
-- システムクロックの分周
-- カウンタによるLED制御
-- 制約ファイル（XDC）の設定
+- Clock division of the system clock
+- LED control using a counter
+- Constraint file (XDC) settings
 
 ### 02_blinkspeed
 
-ボタン入力によるLED点滅速度の制御を学びます。
+Learn how to control the LED blink speed by button input.
 
-- デバウンス回路の実装
-- ユーザー入力の処理
+- Debounce circuit implementation
+- User input handling
 
 ### 03_pattern
 
-HDMI出力によるパターン表示を行います。
+Display patterns via HDMI output.
 
-- 同期信号生成（syncgen）
-- ピクセルクロック生成（pckgen）
-- HDMI出力制御
+- Sync signal generation (syncgen)
+- Pixel clock generation (pckgen)
+- HDMI output control
 
 ### 04_gradation
 
-グラデーション表示によるHDMI出力の応用です。
+An HDMI output application using gradation display.
 
 ### 05_Zynq7000
 
-Zynq SoCのPS（Processing System）とPL（Programmable Logic）を統合したプロジェクトです。
+A project that integrates the Zynq SoC PS (Processing System) and PL (Programmable Logic).
 
-- Vitis開発環境の使用
-- UART通信
-- PS-PL連携
+- Using the Vitis development environment
+- UART communication
+- PS-PL integration
 
 ### PS_LCD_test
 
-PS側からのLCD制御テストプロジェクトです。
+A test project for LCD control from the PS side.
 
-## 開発環境
+## Development Environment
 
 - **Vivado**: 2023.2
 - **Vitis**: 2023.2
 
-## 参考資料
+## References
 
-`documents/`フォルダに以下の資料が含まれています：
+The following materials are included in the `documents/` folder:
 
-- EBAZ4205回路図・説明書・PCBデータ・Linuxイメージ（`documents/EBAZ4205/`）
-- Zynq-7000 TRM（テクニカルリファレンスマニュアル）（`documents/xilinx_user_guide/`）
-- ブートイメージ（`documents/TF_boot_image/`）
-- Ethernet PHY資料（`documents/ether_phy/`）
+- EBAZ4205 schematics, manuals, PCB data, Linux image (`documents/EBAZ4205/`)
+- Zynq-7000 TRM (Technical Reference Manual) (`documents/xilinx_user_guide/`)
+- Boot images (`documents/TF_boot_image/`)
+- Ethernet PHY documents (`documents/ether_phy/`)
 
-## ライセンス
+## License
 
 MIT License
 
 Copyright (c) 2025 tomorrow56 A.K.A. ThousanDIY
 
-## 謝辞
+## Acknowledgements
 
-一部のコードは [Cobac.Net](https://www.cobac.net/) のサンプルを基にしています。
+Some of the code is based on samples from [Cobac.Net](https://www.cobac.net/).
